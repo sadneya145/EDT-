@@ -91,24 +91,24 @@ def main_screen():
         text1.delete(1.0,END)
     
     #1st label
-    Label(text="Enter text for encryption and decryption",font=("calibri",14),bg="yellow").place(x=15,y=10)
+    Label(text="Enter text for encryption and decryption",font=("calibri",14)).place(x=15,y=40)
     
     text1=Text(font="Robote 20", bg="lightgray", relief=GROOVE, wrap=WORD, bd=0)
 
     
-    text1.place(x=15,y=50,width=450,height=100)
+    text1.place(x=15,y=70,width=200,height=90)
     
-    Label(text="Enter secret key for encryption and decryption",fg="black",font=("calibri",14),bg="yellow").place(x=15,y=170)
+    Label(text="Enter secret key for encryption and decryption",fg="black",font=("calibri",14)).place(x=15,y=170)
     
     code=StringVar()
-    Entry(textvariable=code,width=25,bd=0,font=("arial",25),show="*",bg="lightgray").place(x=15,y=200)
+    Entry(textvariable=code,width=10,bd=0,font=("arial",25),show="*",bg="lightgray").place(x=15,y=200)
     
     #buttons
-    Button(text="Encrypt",height="2",width=30,bg="#ed3833",fg="white",bd=0,command=encrypt).place(x=15,y=250)
+    Button(text="Encrypt",height="2",width=30,bg="#ed3833",fg="white",bd=0,command=encrypt).place(x=15,y=350)
     
-    Button(text="Decrypt",height="2",width=30,bg="#00bd56",fg="white",bd=0,command=decrypt).place(x=250,y=250)
+    Button(text="Decrypt",height="2",width=30,bg="#00bd56",fg="white",bd=0,command=decrypt).place(x=15,y=400)
     
-    Button(text="Reset",height="2",width=64,bg="#1089ff",fg="white",bd=0,command=reset).place(x=15,y=300)
+    Button(text="Reset",height="2",width=64,bg="#1089ff",fg="white",bd=0,command=reset).place(x=15,y=450)
     
     
     root.mainloop()
